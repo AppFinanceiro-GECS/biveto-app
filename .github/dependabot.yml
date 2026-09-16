@@ -1,0 +1,28 @@
+# Pacotes do Expo SDK (expo, expo-*, react, react-native) devem ser atualizados juntos
+# com `npx expo install --fix` na troca de SDK, por isso ficam fora do Dependabot.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    ignore:
+      - dependency-name: "expo"
+      - dependency-name: "expo-*"
+      - dependency-name: "@expo/*"
+      - dependency-name: "react"
+      - dependency-name: "react-dom"
+      - dependency-name: "react-native"
+      - dependency-name: "react-native-*"
+      - dependency-name: "eslint-config-expo"
+      - dependency-name: "typescript"
+    groups:
+      npm-minor-patch:
+        update-types: [minor, patch]
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

@@ -35,7 +35,7 @@ export const benefitCardSchema = z.object({
     .min(1, 'Nome do cartao e obrigatorio')
     .max(100, 'Nome muito longo'),
   card_type: z.enum(['va', 'vr', 'flex', 'vt', 'cultura', 'combustivel'], {
-    required_error: 'Selecione o tipo do cartao',
+    message: 'Selecione o tipo do cartao',
   }),
   provider: z.enum(['alelo', 'sodexo', 'vr', 'ticket', 'flash', 'ifood', 'caju', 'swile', 'pluxee', 'other']).nullable().default(null),
   last_four_digits: z
@@ -53,7 +53,7 @@ export const benefitCardSchema = z.object({
     .nullable()
     .default(null),
   recharge_day: z
-    .number({ invalid_type_error: 'Informe um dia valido' })
+    .number({ message: 'Informe um dia valido' })
     .min(1, 'Dia deve ser entre 1 e 31')
     .max(31, 'Dia deve ser entre 1 e 31')
     .nullable()

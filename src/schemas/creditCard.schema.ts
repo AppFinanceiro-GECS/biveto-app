@@ -38,18 +38,18 @@ export const creditCardSchema = z.object({
     .default(null),
   bank_id: z.string().nullable().default(null),
   credit_limit: z
-    .number({ invalid_type_error: 'Informe um valor válido' })
+    .number({ message: 'Informe um valor válido' })
     .min(0.01, 'Limite deve ser maior que zero'),
   initial_balance: z
     .number()
     .min(0, 'Saldo inicial não pode ser negativo')
     .default(0),
   closing_day: z
-    .number({ invalid_type_error: 'Informe um dia válido' })
+    .number({ message: 'Informe um dia válido' })
     .min(1, 'Dia deve ser entre 1 e 31')
     .max(31, 'Dia deve ser entre 1 e 31'),
   due_day: z
-    .number({ invalid_type_error: 'Informe um dia válido' })
+    .number({ message: 'Informe um dia válido' })
     .min(1, 'Dia deve ser entre 1 e 31')
     .max(31, 'Dia deve ser entre 1 e 31'),
   has_points: z.boolean().default(false),

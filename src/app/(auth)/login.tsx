@@ -40,7 +40,7 @@ export default function LoginScreen() {
         <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
           <View style={styles.header}>
             <Image source={require('../../../assets/splash-icon.png')} style={styles.logo} />
-            <Text style={styles.brand}>Biveto</Text>
+            <Text style={styles.brand}>Koin</Text>
             <Text style={styles.tagline}>finanças claras. decisões firmes.</Text>
           </View>
 

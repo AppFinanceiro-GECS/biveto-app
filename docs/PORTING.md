@@ -5,7 +5,7 @@ O frontend web antigo está no repositório [biveto-fin](https://github.com/AppF
 Como portar uma tela:
 
 1. Leia a página em `frontend/src/pages/<Tela>.tsx` do biveto-fin para entender regras e chamadas.
-2. Tipos de resposta: confira o schema no biveto-api (`app/modules/<dominio>/schemas/`) e adicione em `src/types/api.ts`; tipe o método em `src/services/`.
+2. Tipos de resposta: confira o schema no koin-api (`app/modules/<dominio>/schemas/`) e adicione em `src/types/api.ts`; tipe o método em `src/services/`.
 3. Crie a rota em `src/app/(app)/...` usando `useQuery`/`useMutation` e os componentes de `src/components/`.
 4. Após mutações, invalide as queries afetadas (`transactions`, `analytics`, `accounts`...).
 5. Siga o protótipo/layout do time de UX; não copie Tailwind do web.
@@ -13,7 +13,7 @@ Como portar uma tela:
 | Tela web | Status | Observação |
 |---|---|---|
 | Login | ✅ | `(auth)/login` |
-| Invite | ✅ | `(auth)/invite`, deep link `biveto://invite?token=` |
+| Invite | ✅ | `(auth)/invite`, deep link `koin://invite?token=` |
 | Dashboard | ✅ parcial | resumo mensal, maiores gastos, últimas transações; faltam gráficos e insights |
 | Transactions | ✅ parcial | lista, busca, filtro por tipo, criação; faltam edição, exclusão, cartão de crédito, parcelas, recorrência, transferência |
 | Accounts | ✅ parcial | listagem; faltam criar/editar/ajuste de saldo |

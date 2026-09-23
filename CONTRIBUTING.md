@@ -20,7 +20,7 @@
 - [ ] CI verde (gitleaks, lint, typecheck, expo-doctor, export Android/iOS)
 - [ ] Testado em dispositivo/emulador, com estados de carregando, erro e vazio
 - [ ] Textos em pt-BR; código em inglês
-- [ ] Mudou chamada de API? Tipo atualizado em `src/types/api.ts` conforme o schema do [biveto-api](https://github.com/AppFinanceiro-GECS/biveto-api)
+- [ ] Mudou chamada de API? Tipo atualizado em `src/types/api.ts` conforme o schema do [koin-api](https://github.com/AppFinanceiro-GECS/koin-api)
 - [ ] Tela nova/portada marcada em [docs/PORTING.md](docs/PORTING.md)
 
 ## Convenções

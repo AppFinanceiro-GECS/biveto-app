@@ -1,21 +1,21 @@
 {
   "expo": {
-    "name": "Biveto",
-    "slug": "biveto",
+    "name": "Koin",
+    "slug": "koin",
     "version": "0.1.0",
-    "scheme": "biveto",
+    "scheme": "koin",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "bundleIdentifier": "com.biveto.app",
+      "bundleIdentifier": "com.koin.app",
       "supportsTablet": false,
       "config": {
         "usesNonExemptEncryption": false
       }
     },
     "android": {
-      "package": "com.biveto.app",
+      "package": "com.koin.app",
       "adaptiveIcon": {
         "backgroundColor": "#1E3A5F",
         "foregroundImage": "./assets/android-icon-foreground.png",

@@ -11,7 +11,7 @@
 - [ ] `npm run lint && npm run typecheck` passam
 - [ ] Testado no Expo Go / emulador (Android e/ou iOS: diga qual)
 - [ ] Estados de carregando, erro e vazio tratados
-- [ ] Tipos em `src/types/api.ts` batem com o schema do biveto-api
+- [ ] Tipos em `src/types/api.ts` batem com o schema do koin-api
 - [ ] `docs/PORTING.md` atualizado (se portou tela)
 
 ## Prints

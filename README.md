@@ -1,18 +1,18 @@
-# biveto-app
+# koin-app
 
-[![CI](https://github.com/AppFinanceiro-GECS/biveto-app/actions/workflows/ci.yml/badge.svg)](https://github.com/AppFinanceiro-GECS/biveto-app/actions/workflows/ci.yml)
+[![CI](https://github.com/AppFinanceiro-GECS/koin-app/actions/workflows/ci.yml/badge.svg)](https://github.com/AppFinanceiro-GECS/koin-app/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-App mobile (Android/iOS) do **Biveto**, gestão financeira pessoal. React Native com Expo.
+App mobile (Android/iOS) do **Koin** (antigo Biveto), gestão financeira pessoal. React Native com Expo.
 
-A API e a infraestrutura ficam em **[biveto-api](https://github.com/AppFinanceiro-GECS/biveto-api)**.
+A API e a infraestrutura ficam em **[koin-api](https://github.com/AppFinanceiro-GECS/koin-api)**.
 
 ## Rodar
 
 Requisitos: Node 20+, app **Expo Go** no celular (ou emulador Android / simulador iOS) e a API rodando.
 
 ```bash
-# 1. API (no repositório biveto-api)
+# 1. API (no repositório koin-api)
 make up
 make create-admin email=voce@exemplo.com senha='SenhaForte123' nome='Seu Nome'
 
@@ -52,7 +52,7 @@ eas build --profile production --platform all    # AAB (Play Store) e IPA (App S
 eas submit --platform ios                        # envia para o TestFlight/App Store Connect
 ```
 
-Perfis em [`eas.json`](eas.json): `preview` e `production` apontam para `https://api.biveto.com`; ajuste quando o domínio da API estiver definido. Identificador do app: `com.biveto.app` (Android e iOS). O mesmo `package_name` já aparece no `assetlinks.json` da antiga PWA/TWA. Se esse app já foi publicado na Play Store, o novo build precisa ser assinado com a mesma chave de upload.
+Perfis em [`eas.json`](eas.json): `preview` e `production` apontam para `https://api.biveto.com`; ajuste quando o domínio da API estiver definido. Identificador do app: `com.koin.app` (Android e iOS). O app se chamava Biveto (`com.biveto.app`, citado no `assetlinks.json` da antiga PWA/TWA); como ainda não foi publicado com o nome novo, o Koin entra nas lojas como um app novo.
 
 ## Estrutura
 
@@ -67,7 +67,7 @@ src/
   services/               clientes da API por domínio (vieram do web; api.ts faz o refresh do JWT)
   stores/                 Zustand (authStore: tokens no Keychain/Keystore via expo-secure-store)
   lib/                    config da API, formatação, erros, JWT
-  types/api.ts            tipos espelhando os schemas do biveto-api
+  types/api.ts            tipos espelhando os schemas do koin-api
   schemas/, data/         validações zod e dados estáticos (bancos, bandeiras) herdados do web
   theme/                  cores e espaçamentos da marca
 docs/
@@ -77,7 +77,7 @@ docs/
 
 ## Estado atual
 
-Pronto: login, cadastro por convite (`biveto://invite?token=...`), sessão persistente com refresh automático do token, dashboard mensal, lista de transações (busca, filtro e paginação), nova transação (despesa/receita), contas e perfil/logout.
+Pronto: login, cadastro por convite (`koin://invite?token=...`), sessão persistente com refresh automático do token, dashboard mensal, lista de transações (busca, filtro e paginação), nova transação (despesa/receita), contas e perfil/logout.
 
 O restante das telas do web (cartões, faturas, upload de documentos, orçamento, metas, chat...) está listado em **[docs/PORTING.md](docs/PORTING.md)**. Os `services/` de todos esses domínios já estão aqui, então portar uma tela é basicamente escrever a UI.
 

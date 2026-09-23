@@ -1,4 +1,4 @@
-// Espelho dos schemas Pydantic do biveto-api usados pelo app.
+// Espelho dos schemas Pydantic do koin-api usados pelo app.
 // Mudou um schema lá? Atualize aqui.
 
 export interface Token {

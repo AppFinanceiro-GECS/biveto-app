@@ -13,7 +13,7 @@ import { colors, spacing } from '@/theme/colors'
 
 /**
  * Cadastro via convite (o backend não tem cadastro aberto).
- * Deep link: biveto://invite?token=XXXX
+ * Deep link: koin://invite?token=XXXX
  */
 export default function InviteScreen() {
   const params = useLocalSearchParams<{ token?: string }>()

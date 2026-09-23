@@ -4,8 +4,8 @@ import { isTokenExpired } from '@/lib/jwt'
 import { secureStorage } from '@/lib/storage'
 import type { Token, User } from '@/types/api'
 
-const ACCESS_KEY = 'biveto.access_token'
-const REFRESH_KEY = 'biveto.refresh_token'
+const ACCESS_KEY = 'koin.access_token'
+const REFRESH_KEY = 'koin.refresh_token'
 
 type AuthStatus = 'loading' | 'signedOut' | 'signedIn'
 

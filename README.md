@@ -52,7 +52,7 @@ eas build --profile production --platform all    # AAB (Play Store) e IPA (App S
 eas submit --platform ios                        # envia para o TestFlight/App Store Connect
 ```
 
-Perfis em [`eas.json`](eas.json): `preview` e `production` apontam para `https://api.biveto.com`; ajuste quando o domínio da API estiver definido. Identificador do app: `com.koin.app` (Android e iOS). O app se chamava Biveto (`com.biveto.app`, citado no `assetlinks.json` da antiga PWA/TWA); como ainda não foi publicado com o nome novo, o Koin entra nas lojas como um app novo.
+Perfis em [`eas.json`](eas.json): `preview` aponta para a homologação (`https://hml.144-22-232-63.sslip.io`, branch `main` do koin-api) e `production` para a produção (`https://api.144-22-232-63.sslip.io`, branch `prod`). Troque quando houver domínio próprio. Identificador do app: `com.koin.app` (Android e iOS). O app se chamava Biveto (`com.biveto.app`, citado no `assetlinks.json` da antiga PWA/TWA); como ainda não foi publicado com o nome novo, o Koin entra nas lojas como um app novo.
 
 ## Estrutura
 

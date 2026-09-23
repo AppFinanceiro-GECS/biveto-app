@@ -12,11 +12,11 @@
     "preview": {
       "distribution": "internal",
       "android": { "buildType": "apk" },
-      "env": { "EXPO_PUBLIC_API_URL": "https://api.biveto.com" }
+      "env": { "EXPO_PUBLIC_API_URL": "https://hml.144-22-232-63.sslip.io" }
     },
     "production": {
       "autoIncrement": true,
-      "env": { "EXPO_PUBLIC_API_URL": "https://api.biveto.com" }
+      "env": { "EXPO_PUBLIC_API_URL": "https://api.144-22-232-63.sslip.io" }
     }
   },
   "submit": {
